@@ -1,5 +1,9 @@
 # GitHub Copilot Instructions for This Project
 
+## Additional Documentation
+- Use `.github/copilot-task-plans.md` for keeping track of high-level plans and low-level tasks to be implemented
+- Use `.github/copilot-notes.md` to track learnings and guidance for future runs
+
 ## Project Overview
 - This is a Bun project.
 - This project is dockerized.
