@@ -1,8 +1,8 @@
 # GitHub Copilot Instructions for This Project
 
 ## Additional Documentation
-- Use `.github/copilot-task-plans.md` for keeping track of high-level plans and low-level tasks to be implemented
-- Use `.github/copilot-notes.md` to track learnings and guidance for future runs
+- Always read from and write to `.github/copilot-task-plans.md` for keeping track of high-level plans and low-level tasks to be implemented
+- Always read from and write to `.github/copilot-notes.md` to track learnings and guidance for future runs
 
 ## Project Overview
 - This is a Bun project.
@@ -30,4 +30,5 @@ If Redis is used in this project:
 ## Telegram Bot Implementation
 If this project implements a Telegram bot:
 - Use `npm:grammy` and its related plugins
+- Avoid the use of slash commands where possible. Prefer @grammyjs/conversations, inline keyboard, or inline queries for interactions.
 - **Important**: Grammy sessions MUST NOT be used in this project.
