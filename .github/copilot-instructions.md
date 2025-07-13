@@ -31,5 +31,7 @@ If Redis is used in this project:
 ## Telegram Bot Implementation
 If this project implements a Telegram bot:
 - Use `npm:grammy` and its related plugins
+- If using grammy, the grammy Bot object should be created as a global object in `src/index.ts`. Do not create a function to get or create this bot object.
+- A Composer object representing all of the bot's middleware, should be created in a separate file. The global bot object should only `.use` this composer, and nothing else.
 - Avoid the use of slash commands where possible. Prefer @grammyjs/conversations, inline keyboard, or inline queries for interactions.
 - **Important**: Grammy sessions MUST NOT be used in this project.
