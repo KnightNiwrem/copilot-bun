@@ -9,6 +9,7 @@
 - This project is dockerized.
 
 ## Development Workflow
+- If asked to plan or brainstorm, refrain from writing code. Instead, read from and write to `.github/copilot-task-plans.md` to plan out the high level and low level implementation steps.
 - Lint, typecheck, and test should pass before completing the task
 
 ## Database Configurations
