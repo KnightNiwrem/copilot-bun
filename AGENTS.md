@@ -3,7 +3,7 @@
 - Work remains agent-agnostic—assume no private credentials are available and prefer reproducible, scripted changes.
 
 ## Environment & Tooling
-- Use the Bun version pinned via `bun.lock` and Docker (`oven/bun:1.2.14-slim`). Verify with `bun --version` when troubleshooting and document any version bumps here.
+- Use the Bun version pinned via `bun.lock` and Docker (`oven/bun:1-slim`). Verify with `bun --version` when troubleshooting and document any version bumps here.
 - Install dependencies with `bun install`; never edit `bun.lock` by hand and commit it with dependency changes.
 - Rely on `package.json` scripts via `bun run <script>` for consistent tooling. Extend scripts instead of invoking binaries directly.
 - Leverage Docker for parity: `docker compose up --build` should produce a working environment after updates. Keep container scripts reproducible and avoid mutating state outside version control.
