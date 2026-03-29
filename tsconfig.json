@@ -25,7 +25,7 @@
     "noUnusedLocals": false,
     "noUnusedParameters": false,
     "noPropertyAccessFromIndexSignature": false,
-    
+
     // Base path
     "baseUrl": ".",
     "paths": {

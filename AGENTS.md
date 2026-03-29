@@ -12,8 +12,8 @@
 - Install: `bun install`
 - Application: `bun start`
 - Watch mode: `bun dev`
-- Lint: `bun lint`
-- Autofix lint issues: `bun lint:fix`
+- Check: `bun run check`
+- Autofix check issues: `bun run check:fix`
 - Type-check: `bun typecheck`
 - Tests: `bun test` (supports `--watch`, `--concurrent`, `--max-concurrency`, and `--coverage` for CI scenarios)
 - Add more task-specific commands here as they emerge (keep this list authoritative for agents).
@@ -22,13 +22,13 @@
 1. Inspect the nearest `AGENTS.md` plus task instructions before editing; clarify unknowns before changing files.
 2. When asked to plan or brainstorm, outline the approach in conversation first; begin coding only after the plan is acknowledged.
 3. Favor small, reviewable diffs scoped to the feature or fix. Add or update tests alongside behavioral changes.
-4. Run `bun lint`, `bun typecheck`, and `bun test` before completion. Capture command output for review summaries when relevant.
+4. Run `bun run check`, `bun typecheck`, and `bun test` before completion. Capture command output for review summaries when relevant.
 5. For remote dependency updates, note the rationale and relevant changelog entries in commit/PR descriptions.
 6. Prefer scripted workflows (npm-style scripts, `docker compose`, or Make targets) over ad-hoc commands to preserve reproducibility.
 
 ## Architecture & Conventions
 - Organize source under `src/` and keep modules ES-module compatible. Reuse shared utilities thoughtfully.
-- Align with existing ESLint config (`eslint.config.js`) and TypeScript settings (`tsconfig.json`). Avoid disabling rules without justification.
+- Align with the existing Biome config (`biome.json`) and TypeScript settings (`tsconfig.json`). Avoid disabling rules without justification.
 - Prefer explicit interfaces or type aliases over `any`; leverage Bun/TypeScript types from `@types/bun` where applicable.
 - Keep environment variables documented in `.env.example` or deployment manifests, not here. Never commit real secrets.
 
@@ -60,6 +60,6 @@
 - When instructions conflict, favor explicit task prompts or nearer `AGENTS.md` files in the directory tree.
 
 ## Maintenance Checklist
-- After significant changes, rerun lint/typecheck/tests and refresh Docker artifacts if relevant.
+- After significant changes, rerun check/typecheck/tests and refresh Docker artifacts if relevant.
 - Archive or replace stale guidance quickly—outdated directions slow future automations.
 - Encourage contributors to reference this file in PR templates to keep agent context current.

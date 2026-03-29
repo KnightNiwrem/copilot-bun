@@ -1,6 +1,6 @@
 # copilot-bun
 
-A Bun project initialized with TypeScript support, ESLint for linting, and TypeScript for type checking.
+A Bun project initialized with TypeScript support, Biome for checking, and TypeScript for type checking.
 
 ## Getting Started
 
@@ -30,17 +30,17 @@ bun dev
 Always run the following commands before completing any tasks:
 
 ```bash
-# Run linting
-bun lint
+# Run checks
+bun run check
 
-# Fix linting issues
-bun lint:fix
+# Fix Biome issues
+bun run check:fix
 
 # Run type checking
 bun typecheck
 ```
 
-Make sure both linting and type checking pass successfully before submitting your work.
+Make sure checks, type checking, and tests pass successfully before submitting your work.
 
 ### Docker
 
